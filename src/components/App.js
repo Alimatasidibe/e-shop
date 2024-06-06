@@ -12,7 +12,7 @@ function App  ()  {
     <Router>
       <Routes>
           <Route path = '/' element={<Accueil panier={panier} updatePanier={updatePanier}/>}></Route>
-          <Route path = '/panier' element={<Panier />}></Route>
+          <Route path = '/panier' element={<Panier panier={panier} updatePanier={updatePanier} />}></Route>
       </Routes>
   </Router>
     

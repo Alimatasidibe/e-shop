@@ -6,9 +6,9 @@ import { Link,NavLink } from 'react-router-dom';
 
 
 function Header  ({panier, updatePanier})  {
-  const nbrItemsInPanier = panier.reduce(
-    (nbr, item) => nbr + item.qte, 0
-  )
+    const nbrItemsInPanier = panier.reduce(
+      (nbr, item) => nbr + item.qte, 0
+    )
   return (
     <header>
       <div id="header-top">
