@@ -11,7 +11,7 @@ function Accueil  ({panier, updatePanier})  {
     <React.Fragment>
       <Header panier={panier} updatePanier={updatePanier}/>
       <Main panier={panier} updatePanier={updatePanier}/>
-      <Footer />
+    <Footer />
     </React.Fragment>
   );
 }

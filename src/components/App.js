@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Accueil from './Accueil';
@@ -7,6 +7,11 @@ import Panier from './Panier';
 
 function App  ()  {
   let [panier, updatePanier]= useState([]);
+
+useEffect(() => {
+    console.log('modifier...');
+  }, [panier])
+
   return (
     
     <Router>

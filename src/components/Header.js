@@ -20,9 +20,9 @@ function Header  ({panier, updatePanier})  {
           <User user_avatar={user_avatar}/>
           <nav>
             <ul>
-              <li><NavLink to="/" className="active">Accueil</NavLink></li>
-              <li><NavLink to="/panier" className="">Panier (<span id="nav-panier">{nbrItemsInPanier}</span>)</NavLink></li>
-              <li><NavLink to="/contact" className="">Contact</NavLink></li>
+              <li><NavLink to="/" className={(isActive) => {isActive ? 'active' : ''}}>Accueil</NavLink>  </li>
+              <li><NavLink to="/panier" className={(isActive) => {isActive ? 'active' : ''}}>Panier (<span id="nav-panier">{nbrItemsInPanier}</span>)</NavLink></li>
+              <li><NavLink to="/contact" className={(isActive) => {isActive ? 'active' : ''}}>Contact</NavLink></li>
             </ul>
           </nav>
         </div>

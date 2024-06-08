@@ -8,9 +8,7 @@ const Section = ({panier, updatePanier}) => {
             {produits.map((produit, key) => (
                 <Produit
                     key={produit.id}
-                    photo={produit.photo}
-                    nom={produit.nom}
-                    prix={produit.prix}
+                    produit={produit}
                     panier={panier} updatePanier={updatePanier}
                 />
             ))}
