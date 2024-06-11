@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/e-shop/static/css/main.e90c1444.css",
+    "main.js": "/e-shop/static/js/main.92ef6abc.js",
+    "static/js/453.92ce18d7.chunk.js": "/e-shop/static/js/453.92ce18d7.chunk.js",
+    "static/media/product-10.jpg": "/e-shop/static/media/product-10.04ed865dec1134d03671.jpg",
+    "static/media/dayrom.svg": "/e-shop/static/media/dayrom.eed80614593e265d5947.svg",
+    "static/media/ico-eshop-s.png": "/e-shop/static/media/ico-eshop-s.252b6897baa1c7d0eeaf.png",
+    "static/media/dayrom.eot": "/e-shop/static/media/dayrom.3e93a389301af152b38a.eot",
+    "static/media/dayrom.ttf": "/e-shop/static/media/dayrom.875b7cba186c89eb711f.ttf",
+    "static/media/ballpark.svg": "/e-shop/static/media/ballpark.9a84de9aef94f0d3fada.svg",
+    "static/media/user.png": "/e-shop/static/media/user.ba6a0a17205b9b574fa1.png",
+    "static/media/dayrom.woff": "/e-shop/static/media/dayrom.e2fb9f9d1aea17cba360.woff",
+    "static/media/product-7.jpg": "/e-shop/static/media/product-7.4b68f0a4c166ccfeb349.jpg",
+    "static/media/product-4.jpg": "/e-shop/static/media/product-4.6c563b3ca6e5c3e02fe1.jpg",
+    "static/media/ballpark.eot": "/e-shop/static/media/ballpark.1372c06441b6216e7b52.eot",
+    "static/media/ballpark.ttf": "/e-shop/static/media/ballpark.da2e80f821aacba5338c.ttf",
+    "static/media/product-8.jpg": "/e-shop/static/media/product-8.c5cbe9755beb7c9328ad.jpg",
+    "static/media/product-1.jpg": "/e-shop/static/media/product-1.78d63a8ff4e344b53377.jpg",
+    "static/media/product-6.jpg": "/e-shop/static/media/product-6.9451b0a7b2eb230c0433.jpg",
+    "static/media/product-9.jpg": "/e-shop/static/media/product-9.514a61c1770d4c7f4240.jpg",
+    "static/media/product-2.jpg": "/e-shop/static/media/product-2.a429598f475f21bb3395.jpg",
+    "static/media/ballpark.woff": "/e-shop/static/media/ballpark.3df9f6b7e5b9cd47a815.woff",
+    "static/media/product-5.jpg": "/e-shop/static/media/product-5.d17a272d2186ca8165e4.jpg",
+    "static/media/product-3.jpg": "/e-shop/static/media/product-3.98525da20389b7550fc5.jpg",
+    "static/media/cover2.webp": "/e-shop/static/media/cover2.c3ea20175788abf1e291.webp",
+    "index.html": "/e-shop/index.html",
+    "main.e90c1444.css.map": "/e-shop/static/css/main.e90c1444.css.map",
+    "main.92ef6abc.js.map": "/e-shop/static/js/main.92ef6abc.js.map",
+    "453.92ce18d7.chunk.js.map": "/e-shop/static/js/453.92ce18d7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e90c1444.css",
+    "static/js/main.92ef6abc.js"
+  ]
+}
