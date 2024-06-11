@@ -3,15 +3,16 @@ import Header from './Header'; // Adjust the path if necessary
 import Main from './Main';
 import Footer from './Footer';
 import { useState,useEffect } from 'react';
+import { ProductsProvider } from '../hooks/products.context';
 
 
-function Accueil  ({panier, updatePanier})  {
+function Accueil  ()  {
   
   return (
     <React.Fragment>
-      <Header panier={panier} updatePanier={updatePanier}/>
-      <Main panier={panier} updatePanier={updatePanier}/>
-    <Footer />
+      <Header/>
+      <Main/>
+      <Footer />
     </React.Fragment>
   );
 }

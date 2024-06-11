@@ -1,6 +1,8 @@
+import { useProducts } from "../hooks/products.context";
 import Section from "./Section";
 
-const Main = ({panier, updatePanier}) => {
+const Main = () => {
+    const {products, panier, updatePanier} = useProducts()
     return (
         <main>
            <Section panier={panier} updatePanier={updatePanier}/>

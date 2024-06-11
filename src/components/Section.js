@@ -1,15 +1,16 @@
 import { produits } from '../data/stock.js';
+import { useProducts } from '../hooks/products.context.jsx';
 import Produit from './Produit.js'; // Ensure you have the correct path to the Produit component
 
-const Section = ({panier, updatePanier}) => {
+const Section = () => {
+    const {products, panier, updatePanier} = useProducts()
     return (
         <section id="produits">
         <div id="produits-liste">
-            {produits.map((produit, key) => (
+            {products.map((produit, key) => (
                 <Produit
                     key={produit.id}
                     produit={produit}
-                    panier={panier} updatePanier={updatePanier}
                 />
             ))}
         </div>

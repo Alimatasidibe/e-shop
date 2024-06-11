@@ -1,9 +1,23 @@
 import React from "react";
+import { useProducts } from "../hooks/products.context";
 
-const PanierItem = ({ produit, qte, updateQte, deleteProduct }) => {
+const PanierItem = ({ produit, qte}) => {
 
-  const handleMoins = () => {
-    updateQte({...produit})
+  const { panier, updatePanier} = useProducts()
+
+  const handleUpdateQte = (increment = true) => {
+    const newPanier = [...panier].map((item) => {
+      if(item.id === produit.id){
+        return increment ? {...item, qte: item.qte + 1}: (item.qte === 1) ? {...item}: {...item, qte: item.qte - 1}
+      }
+      return item
+    })
+    updatePanier(newPanier)
+  }
+
+  const deleteFromPanier = () => {
+    const newPanier = [...panier].filter((item) => item.id !== produit.id)
+    updatePanier(newPanier)
   }
 
   return (
@@ -16,13 +30,13 @@ const PanierItem = ({ produit, qte, updateQte, deleteProduct }) => {
       <td className="quantite">{produit.qte}</td>
     <td className="total">{produit.prix*qte}</td>
       <td className="action">
-        <button className="plus-panier" onClick={handleMoins}>
+        <button className="plus-panier" onClick={handleUpdateQte}>
           +
         </button>
-        <button className="minus-panier" >
+        <button className="minus-panier" onClick={() => handleUpdateQte(false)} >
           -
         </button>
-        <button className="remove-panier" onClick={() => deleteProduct(produit)}>
+        <button className="remove-panier" onClick={() => deleteFromPanier()}>
           x
         </button>
       </td>

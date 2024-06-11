@@ -2,42 +2,14 @@ import React from "react";
 import Header from './Header';
 import Footer from './Footer';
 import PanierItem from "./PanierItem";
-function Panier  ({panier, updatePanier})  {
+import { useProducts } from "../hooks/products.context";
+function Panier  ()  {
 
-    const updateAte = (toUpdate, incremente = true) => {
-        const myPanier = [...panier].map((item) => {
-            const {produit} = item
-            
-            if((toUpdate.id === produit.id)){
-                
-                if (incremente) {
-                    const newQte = produit.qte + 1
-                    const newItem = {...produit, qte:newQte}
-                    return newItem
-                }else{
-                    const newQte = produit.qte - 1
-                    const newItem = {...produit, qte:newQte}
-                    return newItem
-                }
-            
-            }
-            return produit
-        })
-        console.log('new panier after update', myPanier);
-    }
-
-    const deleteProduct = (toUpdate) => {
-        const myPanier = [...panier].filter((item) => {
-            const {produit} = item
-            return produit.id !== toUpdate.id
-        })
-        // updatePanier(myPanier)
-        console.log('new panier after delete', myPanier);
-    }
+    const { panier} = useProducts()
 
     return (
         <React.Fragment>
-          <Header panier={panier} updatePanier={updatePanier}/>
+          <Header />
           <main>
             <div id="panier">
                 <table>
@@ -53,7 +25,8 @@ function Panier  ({panier, updatePanier})  {
                     </thead>
                     <tbody>
                         {panier && panier.map((item, index) =>(
-                            <PanierItem produit = {item.produit} deleteProduct={deleteProduct} qte={item.qte} key={index} updateQte={updateAte} />
+                            // <h1>Hello</h1>
+                            <PanierItem produit = {item} qte={item.qte} key={index} />
                                 
                         ) )}
                         
@@ -63,7 +36,7 @@ function Panier  ({panier, updatePanier})  {
                             <td colSpan="2" className="grandtotal">GRAND TOTAL (F CFA)</td>
                             <td colSpan="4" className="grandtotalv">
                             {panier && panier.reduce(
-                                    (total,item) => total + item.produit.prix * item.qte,
+                                    (total,item) => total + item.prix * item.qte,
                                     0
                                 )}
                             </td>
